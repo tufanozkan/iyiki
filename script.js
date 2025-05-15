@@ -6,13 +6,20 @@ const continueBtn = document.getElementById("continue-btn");
 const balloon = document.getElementById("balloon");
 const popup = document.getElementById("popup");
 const closePopup = document.getElementById("close-popup");
+const music = document.getElementById("bg-music");
+
+music.volume = 0.7; // İstersen sesi ayarlayabilirsin
 
 // 1. Bölümden 2. Bölüme geçiş
 continueBtn.addEventListener("click", () => {
   welcomeSection.classList.remove("active");
   gallerySection.classList.add("active");
 
-  // 5 saniye sonra balon bölümüne geçiş ve balon animasyonu başlat
+  // Müzik sesi açılır ve çalmaya başlar
+  music.muted = false;
+  music.play();
+
+  // 12 saniye sonra balon bölümüne geçiş ve balon animasyonu başlat
   setTimeout(() => {
     gallerySection.classList.remove("active");
     balloonSection.classList.add("active");
