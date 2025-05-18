@@ -28,7 +28,7 @@ continueBtn.addEventListener("click", () => {
     setTimeout(() => {
       balloon.classList.add("fly");
     }, 200); // animasyon başlat
-  }, 12000);
+  }, 16000);
 });
 
 // Balona tıklayınca patlama efekti ve pop-up açılır, balon kaybolur
